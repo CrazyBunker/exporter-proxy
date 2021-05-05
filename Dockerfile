@@ -13,6 +13,6 @@ FROM scratch
 COPY --from=builder /go/src/app/bin/exporter_proxy /exporter_proxy
 
 USER nobody
-EXPOSE 9560
+EXPOSE 9099
 
 CMD ["/exporter_proxy", "-config", "/etc/exporter/config.yml"]
